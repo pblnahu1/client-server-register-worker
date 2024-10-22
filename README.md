@@ -1,20 +1,20 @@
-# App de Registros de Trabajadores
+# Sistema de Registros de Trabajadores
 
-Esta es una aplicación de gestión de registros de trabajadores, implementada con **Angular** en el frontend y **PHP** con **MySQL** en el backend. La aplicación permite realizar un CRUD (Crear, Leer, Actualizar y Eliminar) de trabajadores, junto con características adicionales como autenticación, edición de perfiles y administración de usuarios.
+Esta es una aplicación de gestión de registros de trabajadores, implementada con **Angular** en el frontend y **PHP** con **MySQL** en el backend. La aplicación permite realizar un CRUD (Crear, Leer, Actualizar y Eliminar) de trabajadores, junto con características adicionales que pronto estarán disponibles como autenticación, edición de perfiles y administración de usuarios.
 
 ## Características
 
 - **CRUD completo de trabajadores**: Crear, leer, actualizar y eliminar registros de trabajadores.
-- **Autenticación**: Sistema de login para trabajadores y administradores con manejo de sesiones y tokens JWT.
-- **Edición de perfil**: Los trabajadores pueden editar sus datos personales (nombre, teléfono, email).
-- **Administración de usuarios**: Los administradores tienen la capacidad de gestionar todos los trabajadores, editando o eliminando sus registros.
-- **Seguridad**: Implementación de roles de usuario y protección de rutas.
+- **Autenticación** (pendiente): Sistema de login para trabajadores y administradores con manejo de sesiones y tokens JWT.
+- **Edición de perfil** (pendiente): Los trabajadores pueden editar sus datos personales (nombre, teléfono, email).
+- **Administración de usuarios** (pendiente): Los administradores tienen la capacidad de gestionar todos los trabajadores, editando o eliminando sus registros.
+- **Seguridad** (pendiente): Implementación de roles de usuario y protección de rutas.
 
 ## Requisitos
 
-- **Angular** (v14+)
-- **PHP** (v7.4+)
-- **MySQL** (v5.7+)
+- **Angular**
+- **PHP**
+- **MySQL**
 - **Composer** (para manejar dependencias de PHP)
 - **XAMPP** o cualquier servidor local de PHP con MySQL
 - **Bootstrap o Tailwind**, el que prefieras
@@ -43,7 +43,7 @@ $dbname = "app_registros_trabajadores";
 ```bash
 composer install
 ```
-> 4. Importar el archivo SQL en tu servidor MySQL para crear la BD y las tablas necesarias:
+> 4. Importar el archivo SQL en tu servidor MySQL para crear la BD y las tablas necesarias (opcional):
 ```bash
 mysql -u root -p app_registros_trabajadores < database.sql
 ```
@@ -68,25 +68,26 @@ private URL = "http://localhost:8000";
 
 ## Funcionalidades
 ### 1. Registro de Trabajadores
-- Los trabajadores pueden registrarse con su nombre, teléfono y correo electrónico.
+- El administrador puede agregar trabajadores con su nombre, teléfono, correo electrónico, puesto y estado de disponibilidad.
 - Los administradores tienen control completo sobre los registros de todos los trabajadores.
+- Junto con esto, al agregar, se almacena la fecha de registro y última actualización.
 
-### 2. Inicio de Sesión
-- Los trabajadores pueden iniciar sesión con su email y contraseña.
+### 2. Inicio de Sesión (pendiente)
+- El Administrador puede iniciar sesión con su email y contraseña.
 - Se garantiza la protección de rutas mediante tokens JWT.
 
-### 3. Edición de Perfil
-- Cada trabajador puede editar su información personal, como el nombre, teléfono y correo electrónico.
-- Los trabajadores pueden cambiar su contraseña en cualquier momento.
+### 3. Edición de Perfil (pendiente)
+- El Administrador puede editar su información personal.
+- "               " puede cambiar su contraseña en cualquier momento.
 
 ### 4. Administración de Trabajadores
 - Los administradores pueden ver, editar o eliminar cualquier registro de trabajador.
 - Se ofrece una interfaz para la administración de trabajadores registrados en la BD.
 
-### Próximas Funcionalidades (To-Do)
+### Más Funcionalidades que se pueden agregar (pendiente)
 - Recuperación de contraseñas vía email.
 - Mejoras en el sistema de roles, permitiendo una gestión más avanzada de permisos.
-- Agregar un dashboard de estadísticas para la administración.
+- Agregar un dashboard de estadísticas y gráficos para la administración.
 
 ### Contribuciones
 Si deseas contribuir, por favor realiza un <b>fork</b> del proyecto, crea una rama con tu funcionalidad o mejora, y envía un <b>pull request.</b> Cualquier colaboración será bienvenida.
