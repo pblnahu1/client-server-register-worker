@@ -5,10 +5,6 @@ Esta es una aplicación de gestión de registros de trabajadores, implementada c
 ## Características
 
 - **CRUD completo de trabajadores**: Crear, leer, actualizar y eliminar registros de trabajadores.
-- **Autenticación** (pendiente): Sistema de login para trabajadores y administradores con manejo de sesiones y tokens JWT.
-- **Edición de perfil** (pendiente): Los trabajadores pueden editar sus datos personales (nombre, teléfono, email).
-- **Administración de usuarios** (pendiente): Los administradores tienen la capacidad de gestionar todos los trabajadores, editando o eliminando sus registros.
-- **Seguridad** (pendiente): Implementación de roles de usuario y protección de rutas.
 
 ## Requisitos
 
@@ -66,28 +62,3 @@ private URL = "http://localhost:8000";
 ```
 > 4. Levantar el servidor de desarrollo de Angular: `ng serve --open`
 
-## Funcionalidades
-### 1. Registro de Trabajadores
-- El administrador puede agregar trabajadores con su nombre, teléfono, correo electrónico, puesto y estado de disponibilidad.
-- Los administradores tienen control completo sobre los registros de todos los trabajadores.
-- Junto con esto, al agregar, se almacena la fecha de registro y última actualización.
-
-### 2. Inicio de Sesión (pendiente)
-- El Administrador puede iniciar sesión con su email y contraseña.
-- Se garantiza la protección de rutas mediante tokens JWT.
-
-### 3. Edición de Perfil (pendiente)
-- El Administrador puede editar su información personal.
-- "               " puede cambiar su contraseña en cualquier momento.
-
-### 4. Administración de Trabajadores
-- Los administradores pueden ver, editar o eliminar cualquier registro de trabajador.
-- Se ofrece una interfaz para la administración de trabajadores registrados en la BD.
-
-### Más Funcionalidades que se pueden agregar (pendiente)
-- Recuperación de contraseñas vía email.
-- Mejoras en el sistema de roles, permitiendo una gestión más avanzada de permisos.
-- Agregar un dashboard de estadísticas y gráficos para la administración.
-
-### Contribuciones
-Si deseas contribuir, por favor realiza un <b>fork</b> del proyecto, crea una rama con tu funcionalidad o mejora, y envía un <b>pull request.</b> Cualquier colaboración será bienvenida.

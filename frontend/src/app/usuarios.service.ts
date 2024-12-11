@@ -1,16 +1,17 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UsuariosService {
 
-  URL = "http://localhost/crud-angular/backend/api/";
+  URL = "http://localhost/server-register-worker/backend/api/";
 
   constructor(private http: HttpClient) { }
 
-  obtenerUsuarios() {
+  obtenerUsuarios(): Observable<any>{
     return this.http.get(`${this.URL}obtener_usuarios.php`);
   }
 
@@ -30,5 +31,7 @@ export class UsuariosService {
     return this.http.post(`${this.URL}editar_usuario.php`, JSON.stringify(usuario));
   }
 
-  
+  porcentajeEmpleado(): Observable<any>{
+    return this.http.get(`${this.URL}estado_empleados.php`);
+  }
 }
