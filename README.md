@@ -2,6 +2,8 @@
 
 Esta es una aplicación de gestión de registros de trabajadores, implementada con **Angular** en el frontend y **PHP** con **MySQL** en el backend. La aplicación permite realizar un CRUD (Crear, Leer, Actualizar y Eliminar) de trabajadores, junto con características adicionales.
 
+![alt text](frontend/public/client-server-register-worker.webp "Principal")
+
 ## Características
 
 - **CRUD completo de trabajadores**: Crear, leer, actualizar y eliminar registros de trabajadores.
