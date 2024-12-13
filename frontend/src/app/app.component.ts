@@ -25,7 +25,6 @@ interface Usuario {
 })
 export class AppComponent implements OnInit {
 [x: string]: any;
-  title = 'crud-angular';
   usuarios: any[] = [];
   usuario: Usuario = {
     idUsuario: null,

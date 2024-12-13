@@ -15,8 +15,48 @@ Run `ng generate component component-name` to generate a new component. You can 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
 
 ## Running unit tests
+- Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+- Dependencias: 
+```bash
+npm install jasmine-core karma karma-chrome-launcher karma-jasmine karma-jasmine-html-reporter --save-dev
+```
+- Configuración básica de `karma.conf.js` (manualmente)
+```js
+module.exports = function (config) {
+  config.set({
+    basePath: '',
+    frameworks: ['jasmine', '@angular-devkit/build-angular'],
+    plugins: [
+      require('karma-jasmine'),
+      require('karma-chrome-launcher'),
+      require('karma-jasmine-html-reporter'),
+      require('karma-coverage'),
+      require('@angular-devkit/build-angular/plugins/karma')
+    ],
+    client: {
+      clearContext: false // Mantener visible la salida de las pruebas
+    },
+    coverageReporter: {
+      dir: require('path').join(__dirname, './coverage'),
+      subdir: '.',
+      reporters: [{ type: 'html' }, { type: 'text-summary' }]
+    },
+    reporters: ['progress', 'kjhtml'],
+    port: 9876,
+    colors: true,
+    logLevel: config.LOG_INFO,
+    autoWatch: true,
+    browsers: ['Chrome'],
+    singleRun: false,
+    restartOnFileChange: true
+  });
+};
+```
+- Crear desde la terminal `karma.conf.js` (debe existir el archivo en la raíz del proyecto)
+```bash
+ng test --watch=false --karma-config karma.conf.js
+```
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
 
 ## Running end-to-end tests
 
