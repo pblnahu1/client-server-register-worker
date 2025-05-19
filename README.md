@@ -106,3 +106,5 @@ module.exports = function (config) {
 ```bash
 ng test --watch=false --karma-config karma.conf.js
 ```
+
+## Autor: [Pablo Torrez](https://github.com/pblnahu1)
